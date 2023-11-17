@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="prototypeBean1" class="com.example.Exercise2.Product" scope="prototype">
+        <constructor-arg index="0" value=""/>
+        <constructor-arg index="1" value=""/>
+        <constructor-arg index="2" value=""/>
+        <constructor-arg index="3" value=""/>
+
+        <property name="id" value="1"/>
+        <property name="name" value="Prototype Bean 1"/>
+        <property name="price" value="10.0"/>
+        <property name="description" value="Prototype Bean 1 Description"/>
+    </bean>
+
+    <bean id="prototypeBean2" class="com.example.Exercise2.Product" scope="prototype">
+        <constructor-arg name="id" value="2"/>
+        <constructor-arg name="name" value="Prototype Bean 2"/>
+        <constructor-arg name="price" value="20.0"/>
+        <constructor-arg name="description" value="Prototype Bean 2 Description"/>
+    </bean>
+
+    <bean id="singletonBean" class="com.example.Exercise2.Product" scope="singleton">
+        <constructor-arg name="id" value="3"/>
+        <constructor-arg name="name" value="Singleton Bean"/>
+        <constructor-arg name="price" value="30.0"/>
+        <constructor-arg name="description" value="Singleton Bean Description"/>
+    </bean>
+
+</beans>
